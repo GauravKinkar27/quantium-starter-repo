@@ -2,7 +2,6 @@ from app import app
 
 # 1. Test 1: Verify the App Header is present and contains correct text
 def test_header_present():
-    # Dig into the app's layout tree to find the H1 element
     layout = app.layout
     main_container = layout.children[0]
     header_section = main_container.children[0]
@@ -16,7 +15,6 @@ def test_visualization_present():
     layout = app.layout
     main_container = layout.children[0]
     
-    # Locate the container wrapper holding the Graph component
     graph_wrapper = main_container.children[2]
     graph_component = graph_wrapper.children[0]
     
@@ -28,7 +26,6 @@ def test_region_picker_present():
     layout = app.layout
     main_container = layout.children[0]
     
-    # Locate the Control Filter block holding the RadioItems component
     filter_card = main_container.children[1]
     radio_items_component = filter_card.children[1]
     
